@@ -8,48 +8,60 @@
 
     <title>Battery Sales</title>
 
-    <!-- CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <main class="app-container">
+    <main class="app">
 
-        <!-- Header -->
-        <header class="app-header">
+        <!-- =========================
+             Header
+        ========================== -->
+
+        <header class="header">
 
             <div class="logo">
-                <span class="logo-icon">🔋</span>
-                <h1>Battery Sales</h1>
-            </div>
+                <div class="logo-icon">🔋</div>
 
-            <p class="header-subtitle">
-                Battery registration system
-            </p>
+                <div>
+                    <h1>Battery Sales</h1>
+                    <p>Battery registration system</p>
+                </div>
+            </div>
 
         </header>
 
 
-        <!-- Main Card -->
+        <!-- =========================
+             Main Card
+        ========================== -->
+
         <section class="card">
 
-            <!-- Status Badge -->
-            <div class="status-badge">
-                ● Battery Registration
+            <div class="status">
+                <span class="status-dot"></span>
+                New Battery Sale
             </div>
 
-            <h2>Register Battery Sale</h2>
+
+            <h2>Customer Information</h2>
 
             <p class="description">
-                Enter the battery and customer information below.
+                Please enter the customer information
+                to register this battery sale.
             </p>
 
 
-            <!-- Battery Information -->
+            <!-- =========================
+                 Battery Information
+            ========================== -->
+
             <div class="section-title">
                 Battery Information
             </div>
+
 
             <div class="form-group">
 
@@ -57,12 +69,19 @@
                     Battery ID
                 </label>
 
-                <input type="text" id="batteryId" placeholder="Battery ID" readonly required>
+                <input type="text" id="batteryId" placeholder="Waiting for QR code..." readonly>
+
+                <p id="batteryStatus" class="field-hint">
+                    Scan a battery QR code to continue.
+                </p>
 
             </div>
 
 
-            <!-- Customer Form -->
+            <!-- =========================
+                 Customer Form
+            ========================== -->
+
             <form id="salesForm">
 
                 <div class="section-title">
@@ -71,43 +90,47 @@
 
 
                 <!-- Customer Name -->
+
                 <div class="form-group">
 
                     <label for="customerName">
                         Customer Name
                     </label>
 
-                    <input type="text" id="customerName" placeholder="Enter customer name" required>
+                    <input type="text" id="customerName" placeholder="Enter customer name" autocomplete="name" required>
 
                 </div>
 
 
                 <!-- Phone -->
+
                 <div class="form-group">
 
                     <label for="phone">
                         Phone Number
                     </label>
 
-                    <input type="tel" id="phone" placeholder="Enter phone number" inputmode="numeric"
-                        pattern="[0-9+\-\s]+" required>
+                    <input type="tel" id="phone" placeholder="Enter phone number" inputmode="numeric" autocomplete="tel"
+                        required>
 
                 </div>
 
 
                 <!-- Address -->
+
                 <div class="form-group">
 
                     <label for="address">
                         Address
                     </label>
 
-                    <textarea id="address" placeholder="Enter customer address" rows="3" required></textarea>
+                    <textarea id="address" rows="3" placeholder="Enter customer address" required></textarea>
 
                 </div>
 
 
                 <!-- Branch -->
+
                 <div class="form-group">
 
                     <label for="branch">
@@ -137,11 +160,17 @@
                 </div>
 
 
-                <!-- Message -->
-                <div id="message" class="message hidden" role="alert"></div>
+                <!-- =========================
+                     Message
+                ========================== -->
+
+                <div id="message" class="message hidden"></div>
 
 
-                <!-- Submit Button -->
+                <!-- =========================
+                     Submit
+                ========================== -->
+
                 <button type="submit" id="submitButton" class="submit-button">
                     Register Sale
                 </button>
@@ -151,7 +180,10 @@
         </section>
 
 
-        <!-- Footer -->
+        <!-- =========================
+             Footer
+        ========================== -->
+
         <footer>
             Battery Sales System © 2026
         </footer>
@@ -159,7 +191,7 @@
     </main>
 
 
-    <!-- JavaScript -->
+    <!-- Main JavaScript -->
     <script src="js/app.js"></script>
 
 </body>

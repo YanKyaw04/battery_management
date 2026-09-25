@@ -1,6 +1,6 @@
-/* ================================
-   Global Reset
-================================ */
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -9,164 +9,163 @@
 }
 
 
-/* ================================
-   Body
-================================ */
+/* =========================================
+   BODY
+========================================= */
 
 body {
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    padding: 24px;
+    padding: 30px 16px;
+
+    background: #f4f7fb;
+
+    color: #172033;
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
-
-    background: #f3f6fb;
-
-    color: #1f2937;
 }
 
 
-/* ================================
-   Main Container
-================================ */
+/* =========================================
+   APP CONTAINER
+========================================= */
 
-.app-container {
+.app {
     width: 100%;
     max-width: 520px;
 }
 
 
-/* ================================
-   Header
-================================ */
+/* =========================================
+   HEADER
+========================================= */
 
-.app-header {
-    text-align: center;
-
-    margin-bottom: 24px;
+.header {
+    margin-bottom: 20px;
 }
-
 
 .logo {
     display: flex;
-
-    justify-content: center;
     align-items: center;
 
-    gap: 10px;
+    gap: 12px;
 }
 
-
 .logo-icon {
+    width: 46px;
+    height: 46px;
+
     display: flex;
-
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    width: 42px;
-    height: 42px;
-
-    border-radius: 12px;
+    border-radius: 13px;
 
     background: #2563eb;
 
-    font-size: 24px;
+    font-size: 25px;
 }
 
-
 .logo h1 {
-    font-size: 26px;
-
+    font-size: 23px;
     font-weight: 700;
 
     color: #172554;
 }
 
+.logo p {
+    margin-top: 3px;
 
-.header-subtitle {
-    margin-top: 8px;
+    font-size: 13px;
 
     color: #64748b;
-
-    font-size: 14px;
 }
 
 
-/* ================================
-   Card
-================================ */
+/* =========================================
+   CARD
+========================================= */
 
 .card {
+    padding: 30px;
+
     background: #ffffff;
-
-    padding: 32px;
-
-    border-radius: 20px;
 
     border: 1px solid #e2e8f0;
 
+    border-radius: 20px;
+
     box-shadow:
-        0 10px 30px rgba(15, 23, 42, 0.06);
+        0 10px 35px rgba(15, 23, 42, 0.07);
 }
 
 
-/* ================================
-   Status Badge
-================================ */
+/* =========================================
+   STATUS
+========================================= */
 
-.status-badge {
-    display: inline-block;
+.status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
 
     margin-bottom: 18px;
 
-    padding: 7px 12px;
+    padding: 7px 11px;
 
     border-radius: 20px;
 
-    background: #dcfce7;
+    background: #ecfdf5;
 
-    color: #15803d;
+    color: #047857;
 
     font-size: 12px;
-
     font-weight: 600;
 }
 
+.status-dot {
+    width: 7px;
+    height: 7px;
 
-/* ================================
-   Headings
-================================ */
+    border-radius: 50%;
+
+    background: #10b981;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
 
 .card h2 {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 
     font-size: 24px;
 
     color: #0f172a;
 }
 
-
 .description {
-    margin-bottom: 28px;
-
-    color: #64748b;
+    margin-bottom: 25px;
 
     font-size: 14px;
 
     line-height: 1.6;
+
+    color: #64748b;
 }
 
 
-/* ================================
-   Section Titles
-================================ */
+/* =========================================
+   SECTION TITLE
+========================================= */
 
 .section-title {
     margin-top: 22px;
@@ -174,52 +173,38 @@ body {
 
     padding-bottom: 10px;
 
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 14px;
+    font-weight: 700;
 
     color: #334155;
-
-    font-size: 15px;
-
-    font-weight: 700;
 }
 
 
-/* ================================
-   Form Groups
-================================ */
+/* =========================================
+   FORM GROUP
+========================================= */
 
 .form-group {
     margin-bottom: 18px;
 }
 
-
 .form-group label {
     display: block;
 
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
 
     color: #334155;
-
-    font-size: 14px;
-
-    font-weight: 600;
 }
 
 
-.form-group small {
-    display: block;
-
-    margin-top: 6px;
-
-    color: #94a3b8;
-
-    font-size: 12px;
-}
-
-
-/* ================================
-   Inputs
-================================ */
+/* =========================================
+   INPUT / SELECT / TEXTAREA
+========================================= */
 
 input,
 textarea,
@@ -232,21 +217,20 @@ select {
 
     border-radius: 10px;
 
+    outline: none;
+
     background: #ffffff;
 
-    color: #1e293b;
+    color: #172033;
 
     font-family: inherit;
 
     font-size: 14px;
 
-    outline: none;
-
     transition:
-        border-color 0.2s,
-        box-shadow 0.2s;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
-
 
 input:focus,
 textarea:focus,
@@ -254,23 +238,63 @@ select:focus {
     border-color: #2563eb;
 
     box-shadow:
-        0 0 0 3px rgba(37, 99, 235, 0.12);
+        0 0 0 3px rgba(37, 99, 235, 0.10);
 }
 
+
+/* =========================================
+   BATTERY ID
+========================================= */
+
+#batteryId {
+    background: #f8fafc;
+
+    color: #1e3a8a;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+#batteryId::placeholder {
+    color: #94a3b8;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   FIELD HINT
+========================================= */
+
+.field-hint {
+    margin-top: 6px;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
 
 textarea {
     resize: vertical;
+
+    min-height: 90px;
 }
 
 
-/* ================================
-   Submit Button
-================================ */
+/* =========================================
+   BUTTON
+========================================= */
 
 .submit-button {
     width: 100%;
 
-    margin-top: 12px;
+    margin-top: 10px;
 
     padding: 14px;
 
@@ -282,27 +306,23 @@ textarea {
 
     color: #ffffff;
 
-    font-size: 15px;
-
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
 
     cursor: pointer;
 
     transition:
-        background 0.2s,
-        transform 0.2s;
+        background 0.2s ease,
+        transform 0.1s ease;
 }
-
 
 .submit-button:hover {
     background: #1d4ed8;
 }
 
-
 .submit-button:active {
     transform: scale(0.98);
 }
-
 
 .submit-button:disabled {
     background: #94a3b8;
@@ -311,12 +331,12 @@ textarea {
 }
 
 
-/* ================================
-   Messages
-================================ */
+/* =========================================
+   MESSAGE
+========================================= */
 
 .message {
-    margin-top: 16px;
+    margin-top: 15px;
 
     padding: 12px 14px;
 
@@ -327,61 +347,59 @@ textarea {
     line-height: 1.5;
 }
 
-
 .message.success {
-    background: #dcfce7;
+    background: #ecfdf5;
 
-    color: #166534;
+    color: #047857;
 }
-
 
 .message.error {
-    background: #fee2e2;
+    background: #fef2f2;
 
-    color: #991b1b;
+    color: #b91c1c;
 }
-
 
 .hidden {
     display: none;
 }
 
 
-/* ================================
-   Footer
-================================ */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
-    margin-top: 22px;
+    margin-top: 20px;
 
     text-align: center;
 
-    color: #94a3b8;
-
     font-size: 12px;
+
+    color: #94a3b8;
 }
 
 
-/* ================================
-   Mobile Responsive
-================================ */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 480px) {
 
     body {
-        padding: 16px;
+        padding: 18px 12px;
     }
 
     .card {
-        padding: 22px;
+        padding: 22px 18px;
+
+        border-radius: 16px;
     }
 
     .logo h1 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .card h2 {
         font-size: 21px;
     }
-
 }

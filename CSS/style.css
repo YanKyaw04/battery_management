@@ -1,0 +1,387 @@
+/* ================================
+   Global Reset
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   Body
+================================ */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f3f6fb;
+
+    color: #1f2937;
+}
+
+
+/* ================================
+   Main Container
+================================ */
+
+.app-container {
+    width: 100%;
+    max-width: 520px;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+.app-header {
+    text-align: center;
+
+    margin-bottom: 24px;
+}
+
+
+.logo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.logo-icon {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    font-size: 24px;
+}
+
+
+.logo h1 {
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: #172554;
+}
+
+
+.header-subtitle {
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   Card
+================================ */
+
+.card {
+    background: #ffffff;
+
+    padding: 32px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ================================
+   Status Badge
+================================ */
+
+.status-badge {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   Headings
+================================ */
+
+.card h2 {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+
+    color: #0f172a;
+}
+
+
+.description {
+    margin-bottom: 28px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   Section Titles
+================================ */
+
+.section-title {
+    margin-top: 22px;
+    margin-bottom: 16px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    color: #334155;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+/* ================================
+   Form Groups
+================================ */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.form-group small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   Inputs
+================================ */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ================================
+   Submit Button
+================================ */
+
+.submit-button {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+
+.submit-button:hover {
+    background: #1d4ed8;
+}
+
+
+.submit-button:active {
+    transform: scale(0.98);
+}
+
+
+.submit-button:disabled {
+    background: #94a3b8;
+
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   Messages
+================================ */
+
+.message {
+    margin-top: 16px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.message.success {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+.message.error {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    margin-top: 22px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   Mobile Responsive
+================================ */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    .card h2 {
+        font-size: 21px;
+    }
+
+}

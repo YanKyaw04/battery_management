@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Battery Sales</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+
+            <div class="logo">
+                <span class="logo-icon">🔋</span>
+                <h1>Battery Sales</h1>
+            </div>
+
+            <p class="header-subtitle">
+                Battery registration system
+            </p>
+
+        </header>
+
+
+        <!-- Main Card -->
+        <section class="card">
+
+            <!-- Status Badge -->
+            <div class="status-badge">
+                ● Battery Registration
+            </div>
+
+            <h2>Register Battery Sale</h2>
+
+            <p class="description">
+                Enter the battery and customer information below.
+            </p>
+
+
+            <!-- Battery Information -->
+            <div class="section-title">
+                Battery Information
+            </div>
+
+            <div class="form-group">
+
+                <label for="batteryId">
+                    Battery ID
+                </label>
+
+                <input type="text" id="batteryId" placeholder="Battery ID" readonly required>
+
+            </div>
+
+
+            <!-- Customer Form -->
+            <form id="salesForm">
+
+                <div class="section-title">
+                    Customer Information
+                </div>
+
+
+                <!-- Customer Name -->
+                <div class="form-group">
+
+                    <label for="customerName">
+                        Customer Name
+                    </label>
+
+                    <input type="text" id="customerName" placeholder="Enter customer name" required>
+
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input type="tel" id="phone" placeholder="Enter phone number" inputmode="numeric"
+                        pattern="[0-9+\-\s]+" required>
+
+                </div>
+
+
+                <!-- Address -->
+                <div class="form-group">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <textarea id="address" placeholder="Enter customer address" rows="3" required></textarea>
+
+                </div>
+
+
+                <!-- Branch -->
+                <div class="form-group">
+
+                    <label for="branch">
+                        Branch
+                    </label>
+
+                    <select id="branch" required>
+
+                        <option value="">
+                            Select branch
+                        </option>
+
+                        <option value="Yangon">
+                            Yangon
+                        </option>
+
+                        <option value="Mandalay">
+                            Mandalay
+                        </option>
+
+                        <option value="Naypyidaw">
+                            Naypyidaw
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Message -->
+                <div id="message" class="message hidden" role="alert"></div>
+
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitButton" class="submit-button">
+                    Register Sale
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            Battery Sales System © 2026
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
